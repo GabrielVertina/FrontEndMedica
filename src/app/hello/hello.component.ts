@@ -6,7 +6,7 @@ import * as timers from "node:timers";
 @Component({
   selector: 'app-hello',
   standalone: true,
-  imports: [],
+
   templateUrl: './hello.component.html',
   styleUrl: './hello.component.css'
 })
@@ -20,8 +20,7 @@ ngOnInit(){
     res => {
       this.message = res;
     console.log("Resposta do backend",res);
-    }
-  );
+    });
 
 }
 
