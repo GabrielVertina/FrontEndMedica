@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import {RegisterComponent} from './auth/register/register.component';
 import {HelloComponent} from "./hello/hello.component";
+import {authGuard} from "./auth/auth.guard";
 
 export const routes: Routes = [
 {
@@ -16,7 +17,9 @@ path:"register",
   },
   {
     path: "hello",
-    component: HelloComponent
+    component: HelloComponent,
+ canActivate : [authGuard]
+    
   },
   {
     path: "",
