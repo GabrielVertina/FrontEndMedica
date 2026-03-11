@@ -19,7 +19,7 @@ path:"register",
     path: "hello",
     component: HelloComponent,
  canActivate : [authGuard]
-    
+
   },
   {
     path: "",
